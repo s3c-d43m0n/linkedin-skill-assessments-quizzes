@@ -390,16 +390,7 @@ before_destroy :notify_admin_users, if: ->(model) { model.is_admin }
 - [x] `<=>`
 - [ ] `||`
 
-#### Q38. Which ActiveRecord query prevents SQL injection?
-
-- [ ] `Product.where("name = " << @keyword)`
-- [ ] `Product.where("name = " + h(@keyword))`
-- [x] `Product.where("name = ?", @keyword)`
-- [ ] `Product.where("name = #{@keyword}")`
-
-[Reference](https://guides.rubyonrails.org/active_record_querying.html#pure-string-conditions)
-
-#### Q39. You made a spelling mistake while creating a table for bank accounts. Which code would you expect to see in a migration to fix the error?
+#### Q38. You made a spelling mistake while creating a table for bank accounts. Which code would you expect to see in a migration to fix the error?
 
 - [x] A
 
@@ -442,7 +433,7 @@ class OopsIDidItAgain < ActiveRecord::Migration
 end
 ```
 
-#### Q40. Which HTML is closes to what this code would output?
+#### Q39. Which HTML is closes to what this code would output?
 
 ```
 <% check_box(:post, :visible) %>
@@ -473,7 +464,7 @@ end
 <input type="checkbox" name="post[visible]" value="1" />
 ```
 
-#### Q41. There is a bug in this code. The logout message is not appearing on the login template. What is the cause?
+#### Q40. There is a bug in this code. The logout message is not appearing on the login template. What is the cause?
 
 ```
 class AccessController < ActionController::Base
@@ -489,14 +480,14 @@ end
 - [ ] This is an invalid syntax to use to assign valuse to flash[:notice]
 - [ ] The previous value of flash[:notice] will not be cleared automatically
 
-#### Q42. Which statement about ActiveRecord models is true?
+#### Q41. Which statement about ActiveRecord models is true?
 
 - [ ] Each database column requres adding a matching attr_accessor declaration in the ActiveRecord model.
 - [ ] All attributes in an ActiveRecord model are read-only declared as writable using attr_accessible
 - [x] An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table.
 - [ ] ActiveRecord models can have only attributes that have a matching database column
 
-#### Q43. What is the correct way to assign a value to the session?
+#### Q42. What is the correct way to assign a value to the session?
 
 - [ ] A
 
@@ -815,3 +806,214 @@ raise ActiveRecord::RecordNotFound
   render json: { message: 'User not found' }, status: :user_not_found
 end
 ```
+
+#### Q59. What decides which controller receives which requests?
+
+- [ ] model
+- [ ] view
+- [ ] web server
+- [x] router
+
+#### Q60. When rendering a partial in a view, how would you pass local variables for rendering?
+
+- [ ] `<%= render partial: "nav", globals: {selected: "about"} %>`
+- [x] `<%= render partial: "nav", local_variables: {selected: "about"} %>`
+- [ ] `<%= render partial: "nav", locals: {selected: "about"} %>`
+- [ ] `<%= render partial: "nav", selected: "about"} %>`
+
+#### Q61. Given this code, and assuming `@user` is an instance of `User` that has an assigned location, which choice would be used to return the user's city?
+
+```ruby
+    class Location < ActiveRecord::Base
+        # has database columns for :city, :state
+        has_many :users
+    end
+    class User < ActiveRecord::Base
+        belovngs_to :location
+
+        delegate :city, :state, to: :location, allow_nil: true, prefix: true
+    end
+```
+
+- [ ] `@user.user_city`
+- [ ] `@user.location_city`
+- [x] `@user.city`
+- [ ] `@user.try(:city)`
+
+[Reference](https://itnext.io/understanding-delegate-in-ruby-on-rails-i-wish-i-knew-before-5edd341bad47)
+
+#### Q62. Where would this code most likely be found in a Rails project?
+
+`scope :active, lambda { where(:active => true) }`
+
+- [x] an Active Record model
+- [ ] an ActionView template
+- [ ] an ApplicationHelper file
+- [ ] an ActionController controller
+
+#### Q63. What is a standard prerequisite for implementing Single Table Inheritance (STI)?
+
+- [ ] The models used for STI must mix in the module `ActiveRecord::STI`
+- [ ] All models used for STI must include "self.abstract_class=true".
+- [ ] All database tables used for STI must be related to each other using a foreign key.
+- [ ] The database table used for STI must have a column named "type".
+
+#### Q64. A way that views can share reusable code, such as formatting a date, is called a \_?
+
+- [x] helper
+- [ ] utility
+- [ ] controller
+- [ ] formatter
+
+#### Q65. How do you add Ruby code inside Rails views and have its result outputted in the HTML file?
+
+- [ ] Insert Ruby code inside standard HTML files and surround it with `<% %>`. The web server will handle the rest.
+- [ ] Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<% %>`
+- [ ] Put the code in `an.rb. file` and include it in a `<link>` tag of an HTML file.
+- [x] Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<%= %>`.
+
+#### Q66.You are working with a large database of portfolios that sometimes have an associated image. Which statement best explains the purpose of includes(:image) in this code?
+
+```
+@portfolios = Portfolio.includes(:image).limit(20)
+
+@portfolios.each do |portfolio|
+    puts portfolio.image.caption
+end
+```
+
+- [ ] It preloads the images files using asset pipeline.
+- [ ] It selects only portfolios that have an image attached.
+- [ ] It includes the number of associated images when determining how many records to return.
+- [x] It will execute two database queries of 21 database queries.
+
+#### Q67. What line of code causes the method `decrypt_data` to be run?
+
+```
+class MyModel < ApplicationRecord
+  after_find :decrypt_data
+end
+```
+
+- [ ] MyModel.decrypt_data
+- [ ] MyModel.query(id: 42)
+- [ ] MyModel.find(:decrypt_data)
+- [x] MyModel.where(id: 42)
+
+#### Q68. Which line of inquiry would you follow after receiving this error message: No route matches [POST] "/burrito/create"?
+
+- [ ] Check that there is a matching path for "/burrito/create" in you paths.rb file.
+- [x] Check that there is a `post` route that matches "/burrito/create" in your routes.rb file.
+- [ ] Add the line `resources :burritos` to your routes.rb file.
+- [ ] Check that there is a `get` route that matches "burrito/create" in your paths.rb file.
+
+#### Q69. Which controller action is `not` in danger of returning double render errors?
+
+- [ ] A
+
+```
+def show
+  if params[:detailed] == "1"
+    redirect_to(action: 'detailed_show')
+  end
+  render('show')
+end
+```
+
+- [ ] B
+
+```
+def show
+  render('detailed_show') if params[:detailed] == "1"
+  render('show') and return
+end
+```
+
+- [ ] C
+
+```
+def show
+  if params[:detailed] == "1"
+    render('detailed_show')
+  end
+  render('show')
+end
+```
+
+- [x] D
+
+```
+def show
+  if params[:detailed] == "1"
+    render('detailed_show')
+  end
+end
+```
+
+#### Q70. Which keyword is used in a layout to identify a section where content from the view should be inserted?
+
+- [ ] render
+- [ ] puts
+- [ ] view_content
+- [x] yield
+
+[Reference](https://guides.rubyonrails.org/layouts_and_rendering.html)
+
+#### Q71. Which choice would you not consider when selecting a gem for your project?
+
+- [ ] how many downloads it has on Ruby Toolbox
+- [ ] if it is well documented
+- [x] how long pull requests and issues stay open
+- [ ] the date it was first released
+
+#### Q72. What decides which controller receives which requests?
+
+- [ ] web server
+- [x] router
+- [ ] view
+- [ ] model
+
+#### Q73. Which statement about this code will always be true?
+
+```ruby 
+class UserController < ActionController::Base
+  def show
+    @user = User.find_by_id(session[:user_id])
+    @user ||= User.first
+  end
+end
+```
+
+- [ ] The variable ```@user``` will be set to the object returned by ```User.first``` unless ```session[:user_id]``` has a value.
+- [ ] The result of ```User.find_by_id``` is irrelevant because the variable ```@user``` will always be set to the object returned by ```User.first```.
+- [ ] If ```User.find_by_id``` does not raise an exception, the variable ```@user``` will be set to the object returned by ```User.first```.
+- [ ] If ```User.find_by_id ``` returns nil or false, the variable ```@user``` will be set to the object returned by ```User.first```.
+
+#### Q74. When defining a resource route, seven routes are defined by default. Which two methods allow defining additional routes on the resource?
+
+- [ ] only, except
+- [ ] match, resolve
+- [ ] action, path
+- [ ] member, collection
+
+#### Q75. You are rendering a partial with this code. What will display the user's name?
+
+``` <%= render partial: 'user_info', object: { name: 'user' } %> ```
+
+- [ ] ``` <%= locals.user_info.name %> ```
+- [ ] ``` <%= object.name %> ```
+- [ ] ``` <%= @user.name %> ```
+- [ ] ``` <%= @user_info.name %> ```
+
+#### Q76. Once this form is submitted, which code in the controller would retrieve the string for :name?
+
+```
+<%= form_for(@category) do |f| %>
+<%= f.text_field(:name) %>
+<% end %>
+```
+
+- [ ] ``` params[:name] ```
+- [ ] ``` @params.name ```
+- [ ] ``` params.require(:category).permit(:name) ```
+- [ ] ``` params[:category][:name] ```

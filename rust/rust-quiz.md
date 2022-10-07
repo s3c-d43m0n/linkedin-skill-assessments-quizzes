@@ -205,13 +205,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-- [x]
+- [x] :
 
 ```rust
 write!(&mut v, "{}{}{}", a, b, c)?;
 ```
 
-- [ ]
+- [ ] :
 
 ```rust
 v.write(a)?;
@@ -219,13 +219,13 @@ v.write(b)?;
 v.write(c)?;
 ```
 
-- [ ]
+- [ ] :
 
 ```rust
 v.write(a, b, c)?;
 ```
 
-- [ ]
+- [ ] :
 
 ```rust
 v.write_all(a.as_bytes())?;
@@ -412,14 +412,79 @@ enum Status {
 
 #### Q35. Generics are useful when you **\_**.
 
-- [ ] need to reduce code duplication by concretizing vales and restricting paramaters in functions
-- [x] need to reduce code duplication by abstarting vales further, such as in function paramters
-- [ ] need a supertait
+- [ ] need to reduce code duplication by concretizing values and restricting parameters in functions
+- [x] need to reduce code duplication by abstracting values further, such as in function parameters
+- [ ] need a supertrait
 - [ ] are not sure if you need a specific kind of trait
 
-#### Q36. **\_** cannot be destructed.
+#### Q36. How do you create a Rust project on the command-line?
 
-- [x] Traits
-- [ ] Enums
-- [ ] Tuples
-- [ ] Structs
+- [x] cargo new
+- [ ] rustup init
+- [ ] cargo start
+- [ ] rust new-project
+
+#### Q37. Calling.clone() **\_**.
+
+- [ ] deeply copies heap data and clones ownership
+- [x] clones the pointer to the heap
+- [ ] clones the heap data onto the stack
+- [ ] deeply copies heap and stack
+
+[Reference](https://doc.rust-lang.org/std/rc/)
+
+#### Q38. what is one of the roles of the let keyword?
+
+```rust
+let text = String::new("LinkedIn");
+```
+
+- [ ] Create a text object.
+- [ ] Assign a mutable value.
+- [x] request to borrow a string.
+- [ ] Assign an immutable value.
+
+[Reference](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)
+
+#### Q39. How is a new enum initialized?
+
+```rust
+enum Option_i32 {
+    Some(i32),
+    None,
+}
+```
+
+- [x] let integer = Option_i32::Some(5);
+- [ ] let integer = Option_i32.new(Some(5))
+- [ ] let integer = Option_i32::New::(Some(5))
+- [ ] let integer = Option_i32.init()
+
+[Reference](https://doc.rust-lang.org/rust-by-example/custom_types/enum.html)
+
+#### Q40. What are the main difference between const and static?
+
+- [ ] They can be used interchangeably, but const only supports primitive types while static must be used for structs and user-defined types.
+- [ ] They can be used interchangeably, but const values are compiled at compile time.
+- [ ] Values defined with const live in the stack, while static values live on the heap.
+- [x] Values defined with const can be copied to wherever they are needed, whereas static values remain in a fixed place in memory.
+
+[Reference](https://stackoverflow.com/questions/52751597/what-is-the-difference-between-a-constant-and-a-static-variable-and-which-should)
+
+#### Q41. Which Rust data type represents a signed integer that has the same width as a pointer of the compile target's CPU?
+
+- [ ] i64
+- [ ] int64
+- [x] isize
+- [ ] int
+
+[Reference](https://www.lurklurk.org/effective-rust/use-types.html)
+
+#### Q42. When are supertraits needed?
+
+- [ ] when a trait is needed for multiple structs
+- [x] when a trait depends on another trait
+- [ ] only when a generic trait is used
+- [ ] when a metatrait is needed to use another trait
+
+[Reference](https://doc.rust-lang.org/rust-by-example/trait/supertraits.html)

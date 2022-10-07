@@ -101,7 +101,7 @@ export class OrderService {
 
 #### Q8. What is the correct template syntax for using the built-in ngFor structural directive to render out a list of productNames?
 
-- [ ]
+- [ ] A
 
 ```html
 <ul>
@@ -109,7 +109,7 @@ export class OrderService {
 </ul>
 ```
 
-- [ ]
+- [ ] B
 
 ```html
 <ul>
@@ -117,7 +117,7 @@ export class OrderService {
 </ul>
 ```
 
-- [x]
+- [x] C
 
 ```html
 <ul>
@@ -125,7 +125,7 @@ export class OrderService {
 </ul>
 ```
 
-- [ ]
+- [ ] D
 
 ```html
 <ul>
@@ -226,25 +226,25 @@ export class ShoppingCartComponent {
 </form>
 ```
 
-- [ ]
+- [ ] A
 
 ```html
 <button (click)="submit(userForm.value)" disable="userForm.invalid">Save</button>
 ```
 
-- [x]
+- [x] B
 
 ```html
 <button (click)="submit(userForm.value)" [disabled]="userForm.invalid">Save</button>
 ```
 
-- [ ]
+- [ ] C
 
 ```html
 <button (click)="submit(userForm.value)" [ngForm.disabled]="userForm.valid">Save</button>
 ```
 
-- [ ]
+- [ ] D
 
 ```html
 <button (click)="submit(userForm.value)" *ngIf="userForm.valid">Save</button>
@@ -351,9 +351,8 @@ export class CalloutDirective {
 - [ ] You can use a template reference variable for the HTML input element and then check the valid property off of that.
 - [ ] It is not possible to get access to the field value with template-driven forms. You must use reactive forms for that.
 
-[Angular.io -Show and hide validation error ](https://angular.io/guide/forms#show-and-hide-validation-error-messages)
-
-[Medium](https://medium.com/@agoiabeladeyemi/template-driven-forms-in-angular-4a3a5ad960de)
+1. [Angular.io -Show and hide validation error ](https://angular.io/guide/forms#show-and-hide-validation-error-messages)
+2. [Medium](https://medium.com/@agoiabeladeyemi/template-driven-forms-in-angular-4a3a5ad960de)
 
 #### Q23. What is the value type that will be stored in the headerText template reference variable in this markup?
 
@@ -379,9 +378,8 @@ export class CalloutDirective {
 - [ ] Both of them are wrong. A strong type connot be used for useClass or useExisting.
 - [ ] They are the same. Both will result in the FormattedLogger token being an alias for the instance of Logger.
 
-[Angular.io - Dependency Providers](https://angular.io/guide/dependency-injection-providers#defining-providers)
-
-[TektutorialHub](https://www.tektutorialshub.com/angular/angular-providers/)
+1. [Angular.io - Dependency Providers](https://angular.io/guide/dependency-injection-providers#defining-providers)
+2. [TektutorialHub](https://www.tektutorialshub.com/angular/angular-providers/)
 
 #### Q25. What is the purpose of the data property (seen in the example below) in a route configuration?
 
@@ -398,9 +396,8 @@ export class CalloutDirective {
 - [ ] a property on the route that can be used to load dynamic data for the route
 - [ ] an object that will get auto-injected into the routed component's constructor.
 
-[TektutorialsHub](https://www.tektutorialshub.com/angular/angular-pass-data-to-route/#:~:text=Angular%20allows%20us%20to%20pass,of%20the%20history%20state%20object)
-
-[StackOverflow](https://stackoverflow.com/a/36835156)
+1. [TektutorialsHub](https://www.tektutorialshub.com/angular/angular-pass-data-to-route/#:~:text=Angular%20allows%20us%20to%20pass,of%20the%20history%20state%20object)
+2. [StackOverflow](https://stackoverflow.com/a/36835156)
 
 #### Q26. How does the built-in `ngIf` structural directive change the rendered DOM based on this template syntax?
 
@@ -569,7 +566,7 @@ export class HighlightDirective {
 </form>
 ```
 
-- [ ]
+- [ ] A
 
 ```javascript
     <span *ngIf="username.minLength.invalid"›
@@ -577,13 +574,13 @@ export class HighlightDirective {
     </span>
 ```
 
-- [ ]
+- [ ] B
 
 ```javascript
 <input type="text" formControlName="username" [showMinLength]="true"›
 ```
 
-- [ ]
+- [ ] C
 
 ```javascript
     <span *ngIf="form.get('username').getError('minLength') as minLengthError">
@@ -591,7 +588,7 @@ export class HighlightDirective {
     </span>
 ```
 
-- [x]
+- [x] D
 
 ```javascript
 <input type="text" formControlName="username" #userName="ngModer">
@@ -625,9 +622,8 @@ let fixture = TestBed.createComponent(UserCardComponent);
 - [x] `fixture.nativeElement`
 - [ ] `fixture.componentInstance.template `
 
-[StackOverflow](https://stackoverflow.com/a/56504773)
-
-[Angular.io](https://angular.io/guide/testing-components-basics#nativeelement)
+1. [StackOverflow](https://stackoverflow.com/a/56504773)
+2. [Angular.io](https://angular.io/guide/testing-components-basics#nativeelement)
 
 #### Q39. Given these two components, what will get rendered to the DOM based on the markup usage?
 
@@ -648,7 +644,7 @@ export class BioComponent { }
 <app-card><app-bio>Been around for four years.</app-bio></app-card>
 ```
 
-- [x]
+- [x] A
 
 ```javascript
  <app-card>
@@ -659,7 +655,7 @@ export class BioComponent { }
  </app-card>
 ```
 
-- [ ]
+- [ ] B
 
 ```javascript
 <h1>Data Card</h1>
@@ -668,7 +664,7 @@ export class BioComponent { }
  </app-bio>
 ```
 
-- [ ]
+- [ ] C
 
 ```javascript
 <app-card>
@@ -681,7 +677,7 @@ export class BioComponent { }
 </app-card>
 ```
 
-- [ ]
+- [ ] D
 
 ```javascript
 <app-card>
@@ -694,7 +690,7 @@ export class BioComponent { }
 ```javascript
 @Component({
    selector: 'app-user-card',
-   template: '<app-title-card></app-title-card><p>3enny Smith</p>'
+   template: '<app-title-card></app-title-card><p>Jenny Smith</p>'
 })
 
 @Component({
@@ -706,25 +702,25 @@ export class BioComponent { }
 <app-user-card></app-user-card>
 ```
 
-- [x]
+- [x] A
 
 ```javascript
 <app-user-card>
   <app-title-card>
     <h1>User Data</h1>
   </app-title-card>
-  <p>genny Smith</p>
+  <p>Jenny Smith</p>
 </app-user-card>
 ```
 
-- [ ]
+- [ ] B
 
 ```javascript
 <h1>User Data</h1>
 <p>Jenny Smith<p>
 ```
 
-- [ ]
+- [ ] C
 
 ```javascript
 <app-user-card>
@@ -732,7 +728,7 @@ export class BioComponent { }
 </app-user-card>
 ```
 
-- [ ]
+- [ ] D
 
 ```javascript
 <div app-user-card>
@@ -747,19 +743,19 @@ export class BioComponent { }
 constructor(@Inject('Logger') private logger) { }
 ```
 
-- [ ]
+- [ ] A
 
 ```javascript
 providers: [Logger];
 ```
 
-- [x]
+- [x] B
 
 ```javascript
 providers: [{ provide: 'Logger', useClass: Logger }];
 ```
 
-- [ ]
+- [ ] C
 
 ```javascript
 @Injectable({
@@ -767,19 +763,17 @@ providers: [{ provide: 'Logger', useClass: Logger }];
 })
 ```
 
-- [ ]
+- [ ] D
 
 ```javascript
 providers: [{ provide: 'Logger' }];
 ```
 
-[StackOverflow](https://stackoverflow.com/a/37315355)
+1. [StackOverflow](https://stackoverflow.com/a/37315355)
+2. [TektutorialHub](https://www.tektutorialshub.com/angular/angular-injector-injectable-inject/)
+3. [Angular.io - Dependency Injection In Action](https://angular.io/guide/dependency-injection-in-action#supply-a-custom-provider-with-inject)
 
-[TektutorialHub](https://www.tektutorialshub.com/angular/angular-injector-injectable-inject/)
-
-[Angular.io - Dependency Injection In Action](https://angular.io/guide/dependency-injection-in-action#supply-a-custom-provider-with-inject)
-
-#### Q42. Which choice best describes the following usage of the HttpClient . get method in the getsettings class method?
+#### Q42. Which choice best describes the following usage of the HttpClient.get method in the getsettings class method?
 
 ```javascript
 export class SettingsService {
@@ -788,7 +782,7 @@ export class SettingsService {
 
 getSettings()
 {
-    return this.httpClient.get < Settings > (this.settingsUrl)
+    return this.httpClient.get<Settings>(this.settingsUrl)
         .pipe(
             retry(3)
         );
@@ -800,9 +794,8 @@ getSettings()
 - [ ] Every single call to the getSettings method will result in the Httpclient making three total get requests to the settingsUrl, which is not ideal because there will always be two extra calls that are not needed. The retry operator should not be used in this manner.
 - [x] When the result of the getSettings method is subscribed to, the HTTP GET call will be made; if it fails, it will be retried up to three times before it gives up and returns an error.
 
-[learnrxjs.io](https://www.learnrxjs.io/learn-rxjs/operators/error_handling/retry)
-
-[dev.to](https://dev.to/gparlakov/how-does-rxjs-retry-work-412p)
+1. [learnrxjs.io](https://www.learnrxjs.io/learn-rxjs/operators/error_handling/retry)
+2. [dev.to](https://dev.to/gparlakov/how-does-rxjs-retry-work-412p)
 
 #### Q43. When a service requires some setup to initialize its default state through a method, how can you make sure that said method is invoked before the service gets injected anywhere?
 
@@ -810,6 +803,9 @@ getSettings()
 - [x] Use a factory provider at the root AppModule level that depends on the service to call that service method.
 - [ ] it is not possible to do it at application start; you can do it only at a component level.
 - [ ] Instantiate an instance of the service at the global level (window scope) and then call that method.
+
+1. [Angular.io](https://angular.io/guide/dependency-injection-providers)
+2. [Stackoverflow](https://stackoverflow.com/questions/39803876/how-to-use-factory-provider)
 
 #### Q44. What statement best describes this usage of the TestBed?
 
@@ -823,7 +819,7 @@ const userService = TestBed.get(UserService);
 
 - [ ] The TestBed is required anytime you want to make use of a spy object in a unit test for an Angular provider.
 - [ ] The TestBed is being used to test a component's view.
-- [x] The TestBed scaffolds an NgModule with two providers and handles any dependeny injection. If any Angular class requests the DataService in its constructor, the TestBed will inject spy in that constructor.
+- [x] The TestBed scaffolds an NgModule with two providers and handles any dependency injection. If any Angular class requests the DataService in its constructor, the TestBed will inject spy in that constructor.
 - [ ] The TestBed is configuring the test runner to tell it to only execute tests for the two providers listed in its providers array.
 - `All other tests be ignored, including tests that assert results against one of these providers and a non-defined provider.`
   `Although it will work when multiple providers in this configuration are asserted against in a single test.`
@@ -856,9 +852,8 @@ export class TruncateDirective {
 - [ ] `constructor(maxLength: number) { }`
 - [ ] `Nothing. The directive selector cannot be used to pass in values to the directive.`
 
-[Angular.io](https://angular.io/guide/attribute-directives#passing-values-into-an-attribute-directive)
-
-[StackOverflow](https://stackoverflow.com/a/46303049)
+1. [Angular.io](https://angular.io/guide/attribute-directives#passing-values-into-an-attribute-directive)
+2. [StackOverflow](https://stackoverflow.com/a/46303049)
 
 #### Q47. How can you pass query parameters to this `HttpClient.get` request?
 
@@ -872,16 +867,16 @@ export class OrderService {
 }
 ```
 
-- [ ] `return this.httpClient.get<Order[]>(this.ordersUrl, {'year': year})`
-- [ ] `return this.httpClient.get<Order[]>(this.ordersUrl, year)`
-- [x]
+- [ ] A `return this.httpClient.get<Order[]>(this.ordersUrl, {'year': year})`
+- [ ] B `return this.httpClient.get<Order[]>(this.ordersUrl, year)`
+- [x] C
 
 ```
 const options = {params: new HttpParams().set('year', year) };
 return this.httpClient.get<Order[]>(this.ordersUrl, options);
 ```
 
-- [ ]
+- [ ] D
 
 ```angularjs
 getOrdersByYear(year: number): Observable<Order[]> {
@@ -889,9 +884,8 @@ getOrdersByYear(year: number): Observable<Order[]> {
 }
 ```
 
-[StackOverflow](https://stackoverflow.com/a/34475594)
-
-[TektutorialHub](https://www.tektutorialshub.com/angular/angular-pass-url-parameters-query-strings/#httpparams)
+1. [StackOverflow](https://stackoverflow.com/a/34475594)
+2. [TektutorialHub](https://www.tektutorialshub.com/angular/angular-pass-url-parameters-query-strings/#httpparams)
 
 #### Q48. Assuming the `DataService` has been registered in the providers for the application, which answer best describes what happens based on this component's constructor?
 
@@ -910,9 +904,8 @@ export class OrderHistoryComponent {
 - [ ] It provides a way to do component testing only; the constructor has no usage in the actual run of the Angular application.
 - [ ] It enables the custom element that the component targets to have a custom property named `dataService` that can be used to bind an existing `DataService` instance to.
 
-[StackOverflow](https://stackoverflow.com/a/49755822)
-
-[Angular.io - Dependency Injection](https://angular.io/guide/dependency-injection)
+1. [StackOverflow](https://stackoverflow.com/a/49755822)
+2. [Angular.io - Dependency Injection](https://angular.io/guide/dependency-injection)
 
 #### Q49. Finish this markup using the `ngIf` directive to implement an else case that will display the text "User is not active":
 
@@ -922,7 +915,7 @@ export class OrderHistoryComponent {
 </div>
 ```
 
-- [ ]
+- [ ] A
 
 ```angular2html
 <div #inactive>
@@ -930,7 +923,7 @@ export class OrderHistoryComponent {
 </div>
 ```
 
-- [ ]
+- [ ] B
 
 ```angular2html
 <div *ngIf="inactive">
@@ -938,7 +931,7 @@ export class OrderHistoryComponent {
 </div>
 ```
 
-- [ ]
+- [ ] C
 
 ```angular2html
 <ng-template #else="inactive">
@@ -946,7 +939,7 @@ export class OrderHistoryComponent {
 </ng-template>
 ```
 
-- [x]
+- [x] D
 
 ```angular2html
 <ng-template #inactive>
@@ -958,7 +951,7 @@ export class OrderHistoryComponent {
 
 #### Q50. What is the correct syntax for a route definition to lazy load a feature module?
 
-- [ ]
+- [ ] A
 
 ```
 {
@@ -967,7 +960,7 @@ export class OrderHistoryComponent {
 }
 ```
 
-- [x]
+- [x] B
 
 ```
 {
@@ -976,7 +969,7 @@ export class OrderHistoryComponent {
 }
 ```
 
-- [ ]
+- [ ] C
 
 ```
 {
@@ -985,7 +978,7 @@ export class OrderHistoryComponent {
 }
 ```
 
-- [ ]
+- [ ] D
 
 ```
 {
@@ -1018,9 +1011,8 @@ export class UserFormControl implements OnInit {
 - [ ] Validation cannot be set up this way in reactive forms.
 - [x] The `FormControl` for `username` is getting configured with three validators: the `required` and `minLength` validators that come from Angular, and a custom validator function named `unique` that checks for the value not equal to the string `admin`.
 
-[Angular.io - Form Validation](https://angular.io/guide/form-validation)
-
-[Angular University Blog](https://blog.angular-university.io/angular-custom-validators/)
+1. [Angular.io - Form Validation](https://angular.io/guide/form-validation)
+2. [Angular University Blog](https://blog.angular-university.io/angular-custom-validators/)
 
 #### Q52. What does the Injectable decorator do on this service class?
 
@@ -1045,11 +1037,11 @@ export interface AppSettings {
 	title: string;
 	version: number;
 }
-export const APP_SETTINGS = new Injection<AppSettings>('app.settings');
+export const APP_SETTINGS = new InjectionToken<AppSettings>('app.settings');
 ```
 
 - [ ] The InjectionToken is adding an instance of the AppSettings to the root provider via the InjectionToken constructor call, making it automatically available to all NgModules, services and components throughout the Angular application without the need to inject it anywhere.
-- [ ] The InjectionToken is used to create a provider token for a non-class dependency. An Object literal can be provider as a value for the APP_SETTINGS dependency provider type that can then be injected into components, services, etc ..
+- [x] The InjectionToken is used to create a provider token for a non-class dependency. An Object literal can be provider as a value for the APP_SETTINGS dependency provider type that can then be injected into components, services, etc ..
 - [ ] The InjectionToken is used to create a dynamic decorator for the AppSettings that can be used on constructor parameters via an @AppSettings decorator.
 - [ ] This code has an error since you cannot use a TypeScript interface for the generic type on the InjectionToken
 
@@ -1068,7 +1060,7 @@ export const APP_SETTINGS = new Injection<AppSettings>('app.settings');
 - [ ] submit(ngForm.value)
 - [ ] submit(FirstName, lastName)
 
-#### Q54. What is the purpose of the prelodingStrategy property configuration in this router code?
+#### Q55. What is the purpose of the prelodingStrategy property configuration in this router code?
 
 ```
 RouterModule.forRoot (
@@ -1082,9 +1074,11 @@ RouterModule.forRoot (
 - [ ] It enables the option to flag individual routes for preloading.
 - [ ] It preloads all dependencies for routes, creating instances of services when the app first starts up
 - [ ] It ensures all modules get built into a single app module bundle file.
-- [ ] It configures the router to immediately load all routes that have a loadChildren property(routes that are typically loaded when requested)
+- [x] It configures the router to immediately load all routes that have a loadChildren property(routes that are typically loaded when requested)
 
-#### Q55. What is an alternative way to write this markup to bind the value of the class field `userName` to the `h1` element title property?
+[Reference](https://medium.com/geekculture/preloading-strategy-in-angularsave-loading-time-ca791074fe28)
+
+#### Q56. What is an alternative way to write this markup to bind the value of the class field `userName` to the `h1` element title property?
 
 ```html
 <h1 [title]="userName">Current user is {{ userName }}</h1>
@@ -1095,7 +1089,7 @@ RouterModule.forRoot (
 - [ ] title="{{ 'userName' }}"
 - [ ] The only way to do it is by using the square brackets.
 
-#### Q56. What is the `async` pipe doing in this example?
+#### Q57. What is the `async` pipe doing in this example?
 
 ```ts
 @Component({
@@ -1116,7 +1110,7 @@ export class UsersComponent implements OnInit {
 - [x] It is subscribing to the observable returned from the `HttpClient.get` method and unwrapping the returned value so it can be iterated over in the `ngFor`.
 - [ ] It is allowing all of the users in the `users` field to be rendered concurrently to the DOM.
 
-#### Q57. How would you make use of this directive in markup based on its selector value
+#### Q58. How would you make use of this directive in markup based on its selector value
 
 ```ts
 @Directive({
@@ -1131,3 +1125,130 @@ export class TruncateDirective{
 - [x] `html <p appTruncate>Some long text</p> `
 - [ ] `html <p app-truncate>Some long text</p> `
 - [ ] `html <app-truncate>Some long text</app-truncate> `
+
+#### Q59. What lifecycle hook can be used on a component to monitor all changes to @Input values on that component?
+
+- [ ] ngOnInit
+- [ ] ngChanges
+- [ ] ngAfterInputChange
+- [x] ngOnChanges
+
+[How to detect when an @Input() value changes in Angular?](https://stackoverflow.com/a/44686085/1573267)
+
+#### Q60. What would be an example template syntax usage of this custom pipe?
+
+```ts
+@Pipe({ name: 'truncate' })
+export class TruncatePipe implements PipeTransform {
+	transform(value: string, maxLength: number, showEllipsis: boolean){
+		const newValue = maxLength ? value.substr(0, maxLength): value;
+		return showEllipsis ? '${newValue}...` : newValue;
+	}
+}
+```
+
+- [x] {( 'some long text' | truncate:10 })
+- [ ] {( 'some long text' | truncate:10:true })
+- [ ] {( 'some long text' | truncate })
+- [ ] all of these answers
+
+#### Q61. Which Angular CLI command would you run to generate a UsersComponent and add it to the SharedModule (in file shared.module.ts in your application)?
+
+- [ ] ng generate component --newModule=shared
+- [ ] ng generate component users --module=shared
+- [ ] ng generate component users --shared
+- [ ] ng generate component --add=shared
+
+#### Q62. How can you rewrite this markup so the div container is not needed in the final DOM render
+
+```javascript
+<div *ngIf="location">
+	<h1>{{ location.name }}</h1>
+	<p>{{ location.description }}</p>
+</div>
+```
+
+- [ ] A
+
+```javascript
+<div *ngIf="location">
+	<h1>{{ location.name }}</h1>
+	<p>{{ location.description }}</p>
+{{ endNgIf }}
+```
+
+- [ ] B
+
+```javascript
+<ng-template *ngIf="location">
+	<h1>{{ location.name }}</h1>
+	<p>{{ location.description }}</p>
+</ng-template>
+```
+
+- [ ] C
+
+```javascript
+<div *ngIf="location" [display]=" ' hidden' ">
+	<h1>{{ location.name }}</h1>
+	<p>{{ location.description }}</p>
+</div>
+```
+
+- [x] D
+
+```javascript
+<ng-container *ngIf="location">
+	<h1>{{ location.name }}</h1>
+	<p>{{ location.description }}</p>
+</ng-container>
+```
+
+#### Q63. Describe the usage of this code:
+
+```javascript
+export interface AppSettings {
+  title: string;
+  version: number;
+}
+```
+
+- [ ] This code as an error since you cannot use a TypeScript interface for the generic type on the InjectionToken.
+- [ ] The InjectionToken is used to create a provider token for a non-class dependency. An object lieteral can be provided as a value for the APP_SETTINGS dependency provider type that can then be injected into components, services, etc.
+- [ ] The InjectionToken is adding an instance of the AppSettings to the roote provider via the the InjectionToken constructor call, making it auto available to all NgModules, services, and componentts throughtout the Angular application without the need to inject it anywhere.
+- [ ] The InjectionToken is used to create a dynamic decorator for the AppSettings that can be sed on constructor parameters via an @AppSettings decorator.
+
+#### Q64. What Angular utilities, if any, are required to unit test a service with no constructor dependencies?
+
+- [ ] By.css() helper method is needed
+- [ ] A text fixture is required to run the service for the unit test.
+- [ ] None. A service can be instantiated and unit tested on its own.
+- [x] The TestBed class iss needed to instantiate the service.
+
+[Angular unit tests](https://angular.io/guide/testing-services) - recheck answers
+
+#### Q65. What is the difference between the CanActivate and the CanLoad route guards?
+
+- [ ] CanActivate is used to check access. CanLoad is used to preload data for the route.
+- [x] CanLoad is used at app startup to allow or deny routes to be added to the route table. CanActivate is used to manage access to routes at the time they are requested.
+- [ ] CanActivate and CanLoad do the exact same thing.
+- [ ] CanLoad prevents an entire NgModule from being delivered and loaded. CanActivate stops routing to a component in that NgModule, but that module is still loaded.
+
+[CanActivate vs Canload](https://stackoverflow.com/questions/42026045/difference-between-angulars-canload-and-canactivate#:~:text=canActivate%20is%20used%20to%20prevent,not%20authorized%20to%20do%20so.) CanActivate prevents access on routes, CanLoad prevents lazy loading.
+
+#### Q66. What is the outlet property used for in this router definition object?
+
+```javascript
+{
+	path: 'document',
+	component: DocumentComponent,
+	outlet: 'document-box'
+}
+```
+
+- [ ] it will locate all instancess of <document-box> in the DOM and inser a DocumentComponent element into them on route navigation.
+- [ ] It declares that the DocumentComponent can be used as a child to a <<document-box> element in addition ot being routed to.
+- [x] It us used to target a <router-outlet> element with the name attribute matching the string value as the location for the DocumentComponent to be rendered when routed to.
+- [ ] It is a source of power for the router. (definitely not the answer :P)
+
+[Angular-outlet](https://angular.io/api/router/RouterOutlet) - recheck answer

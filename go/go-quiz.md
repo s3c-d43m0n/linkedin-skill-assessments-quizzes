@@ -79,9 +79,8 @@ func main() {
 - [ ] It would compile and print nothing because `"[" +nil+"]"` is also `nil`.
 - [ ] It would compile but then panic because `GlobalFlag` was never initialized.
 
-[variables](https://golangbyexample.com/variables-in-golang-complete-guide/) in Go have initial values. For string type, it's an empty string.
-
-[Go Playground](https://play.golang.org/p/TaRIzuD-nxC)
+1. [variables](https://golangbyexample.com/variables-in-golang-complete-guide/) in Go have initial values. For string type, it's an empty string.
+2. [Go Playground](https://play.golang.org/p/TaRIzuD-nxC)
 
 #### Q8. From where is the variable `myVar` accessible if it is declared outside of any functions in a file in package `myPackage` located inside module `myModule`?
 
@@ -90,7 +89,7 @@ func main() {
 - [ ] It can be accessed from anywhere in `myModule`.
 - [ ] It can be accessed by other packages in `myModule` as long as they import `myPackage`
 
-Explanation: to make the variable available outside of `myPackage` change the name to `MyVar`.
+**Explanation**: to make the variable available outside of `myPackage` change the name to `MyVar`.
 See also an example of [Exported names](https://tour.golang.org/basics/3) in the Tour of Go.
 
 #### Q9. How do you tell `go test` to print out the tests it is running?
@@ -126,9 +125,8 @@ func main() {
 - [x] Make `X` and `Y` exported (uppercase)
 - [ ] Use field tags
 
-[How to Parse JSON in Golang?](https://www.geeksforgeeks.org/how-to-parse-json-in-golang/)
-
-[Go Playground](https://play.golang.org/p/RdL6y3Zv8ke)
+1. [How to Parse JSON in Golang?](https://www.geeksforgeeks.org/how-to-parse-json-in-golang/)
+2. [Go Playground](https://play.golang.org/p/RdL6y3Zv8ke)
 
 #### Q11. What does a `sync.Mutex` block while it is locked?
 
@@ -220,12 +218,11 @@ Explanation: documentation block should start with a function name
 - [x] `myVal` must be an interface.
 - [ ] `myVal` must be a numeric type, such as `float64` or `int64`.
 
-Explanation: This kind of type casting (using `.(type)`) is used on interfaces only.
-[this example](https://tutorialedge.net/golang/snippets/type-casting-interface-to-string-go/)
+**Explanation**: This kind of type casting (using `.(type)`) is used on interfaces only.
 
-[Primitive types are type-casted differently](https://golangdocs.com/type-casting-in-golang)
-
-[Go Playground](https://play.golang.org/p/TXF_JBvThp6)
+1. [this example](https://tutorialedge.net/golang/snippets/type-casting-interface-to-string-go/)
+2. [Primitive types are type-casted differently](https://golangdocs.com/type-casting-in-golang)
+3. [Go Playground](https://play.golang.org/p/TXF_JBvThp6)
 
 #### Q17. What is a channel?
 
@@ -300,9 +297,8 @@ Relevant excerpt from the article:
 - [ ] They are opposites. Time.Add(x) is the equivalent of Time.Sub(-x).
 - [x] Time.Add() accepts a Duration parameter and returns a Time while Time.Sub() accepts a Time parameter and returns a Duration.
 
-[time#Time.Add](https://pkg.go.dev/time#Time.Add)
-
-[time#Time.Sub](https://pkg.go.dev/time#Time.Sub)
+1. [time#Time.Add](https://pkg.go.dev/time#Time.Add)
+2. [time#Time.Sub](https://pkg.go.dev/time#Time.Sub)
 
 #### Q24. What is the risk of using multiple field tags in a single struct?
 
@@ -347,9 +343,8 @@ Relevant excerpt from the article:
 - [ ] go test .
 - [x] go test ./...
 
-[Example of testing in Go (Golang)](https://pkg.go.dev/testing)
-
-[Example of cmd in Go (Golang)](https://pkg.go.dev/cmd/go)
+1. [Example of testing in Go (Golang)](https://pkg.go.dev/testing)
+2. [Example of cmd in Go (Golang)](https://pkg.go.dev/cmd/go)
 
 Relevant excerpt from the article:
 
@@ -419,21 +414,14 @@ Relevant excerpt from the article:
 
 Explanation: There is defined neither log.ERROR, nor log.Error() in [log package](https://pkg.go.dev/log); log.Print() arguments are handled in the manner of fmt.Print(); log.Printf() arguments are handled in the manner of fmt.Printf().
 
-#### Q34. How does a `sync.Mutex` block while it is locked?
-
-- [x] any other call to lock that Mutex
-- [ ] all goroutines
-- [ ] any writes to the variable it is locking
-- [ ] any reads or writes of the variable is it locking
-
-#### Q35. Which file names will the `go test` command recognize as test files?
+#### Q34. Which file names will the `go test` command recognize as test files?
 
 - [ ] any that starts with `test`
 - [ ] any files that include the word `test`
 - [ ] only files in the root directory that end in `_test.go`
 - [x] any that ends in `_test.go`
 
-#### Q36. What will be the output of this code?
+#### Q35. What will be the output of this code?
 
 ```
 ch := make(chan int)
@@ -447,7 +435,7 @@ fmt.Println(val)
 - [ ] It will not compile
 - [ ] 2.718
 
-#### Q37. What will be the output of this program?
+#### Q36. What will be the output of this program?
 
 ```
 ch := make(chan int)
@@ -461,20 +449,20 @@ fmt.Println(val)
 - [x] 0
 - [ ] NaN
 
-#### Q38. What will be printed in this code?
+#### Q37. What will be printed in this code?
 
 ```
 var stocks map[string]float64 // stock -> price
 price := stocks["MSFT"]
-fmt.Println("%f\n", price)
+fmt.Printf("%f\n", price)
 ```
 
-- [x] 0
-- [ ] 0.000000
+- [ ] 0
+- [x] 0.000000
 - [ ] The code will panic
 - [ ] NaN
 
-#### Q39. What is the common way to have several executables in your project?
+#### Q38. What is the common way to have several executables in your project?
 
 - [x] Have a cmd directory and a directory per executable inside it.
 - [ ] Comment out main.
@@ -485,7 +473,7 @@ fmt.Println("%f\n", price)
 2. [medium](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091)
 3. [medium](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2)
 
-#### Q40. How can you compile main.go to an executable that will run on OSX arm64 ?
+#### Q39. How can you compile main.go to an executable that will run on OSX arm64 ?
 
 - [ ] Set GOOS to **arm64** and GOARCH to **darwin**.
 - [ ] Set GOOS to **osx** and GOARCH to **arm64**.
@@ -494,7 +482,7 @@ fmt.Println("%f\n", price)
 
 [documentation](https://pkg.go.dev/cmd/go#hdr-Build_constraints)
 
-#### Q41. What is the correct syntax ta start a goroutine that will `print Hello Gopher!`?
+#### Q40. What is the correct syntax to start a goroutine that will `print Hello Gopher!`?
 
 - [ ] `go(fmt.Println("Hello Gopher!"))`
 - [ ] `go func() { fmt.Println("Hello Gopher!") }`
@@ -503,7 +491,7 @@ fmt.Println("%f\n", price)
 
 [Example of start a goroutine](https://go.dev/play/p/KGgnAWpZMrS)
 
-#### Q42. If you iterate over a map in a for range loop, in which order will the key:value pairs be accessed?
+#### Q41. If you iterate over a map in a for range loop, in which order will the key:value pairs be accessed?
 
 - [x] in pseudo-random order that cannot be predicted
 - [ ] in reverse order of how they were added, last in first out
@@ -512,7 +500,7 @@ fmt.Println("%f\n", price)
 
 [Reference](https://go.dev/ref/spec#:~:text=The%20iteration%20order%20over%20maps%20is%20not%20specified)
 
-#### Q43. What is an idiomatic way to customize the representation of a custom struct in a formatted string?
+#### Q42. What is an idiomatic way to customize the representation of a custom struct in a formatted string?
 
 - [ ] There is no customizing the string representation of a type.
 - [ ] Build it in pieces each time by calling individual fields.
@@ -520,3 +508,57 @@ fmt.Println("%f\n", price)
 - [ ] Create a wrapper function that accepts your type and outputs a string.
 
 [Reference](https://go.dev/doc/effective_go#printing)
+
+#### Q43. How can you avoid a goroutine leak in this code?
+
+```
+func findUser(ctx context.Context, login string) (*User, error) {
+	ch := make(chan *User)
+	go func() {
+		ch <- findUserInDB(login)
+	}()
+
+	select {
+	case user := <-ch:
+		return user, nil
+	case <-ctx.Done():
+		return nil, fmt.Errorf("timeout")
+	}
+}
+```
+
+- [ ] Use a sync.WaitGroup.
+- [ ] Make ch a buffered channel.
+- [ ] Add a default case to the select.
+- [ ] Use runtime.SetFinalizer.
+
+**Explanation**: `I am not sure, but I believe we can avoid the goroutine leak by adding a default case to the select statement. The leak happens because if the context timeout is not set correctly and if findUserInDB stalls or is slow, then the findUser function will just stay at the select statement, waiting for something to happen. We can get rid of this waiting by adding a default case, but since the function would just execute the default case every time without waiting for the goroutine, I don't believe this function would do what is intended.`
+
+#### 44. What will this code print?
+
+      var i int8 = 120
+      i += 10
+      fmt.Println(i)
+
+- [x] -126
+- [ ] 0
+- [ ] NaN
+- [ ] 130
+
+#### 45. Given the definition of worker below, what is the right syntax to start a start a goroutine that will call worker and send the result to a channel named ch?
+
+      func worker(m Message) Result
+
+- [ ] go func() {
+      r := worker(m)
+      ch <- r
+      }
+- [ ] go func() {
+      r := worker(m)
+      r -> ch
+      } ()
+- [x] go func() {
+      r := worker(m)
+      ch <- r
+      } ()
+- [ ] go ch <- worker(m)

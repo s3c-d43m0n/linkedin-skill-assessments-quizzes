@@ -1,6 +1,6 @@
-﻿## Machine Learning
+## Machine Learning
 
-#### Q1. You are part of data science team that is working for a national fast-food chain. You create a simple report that shows trend: Customers who visit the store more often and buy smaller meals spend more than customers who visit less frequently and buy larger meals. What is the most likely diagram that your team created?
+#### Q1. You are part of a data science team that is working for a national fast-food chain. You create a simple report that shows trend: Customers who visit the store more often and buy smaller meals spend more than customers who visit less frequently and buy larger meals. What is the most likely diagram that your team created?
 
 - [ ] multiclass classification diagram
 - [x] linear regression and scatter plots
@@ -535,12 +535,13 @@ Note: there are centres of clusters (C0, C1, C2).
 #### Q71. What is the correct option?
 
 ![image](images/machine-learning_Q67.png)
-| no. | Red | Blue | Green |
-| --- | --- | --- | --- |
-| **1.** | Validation error | Training error | Test error |
-| **2.** | Training error | Test error | Validation error |
-| **3.** | Optimal error | Validation error | Test error |
-| **4.** | Validation error | Training error | Optimal error |
+
+| no.    | Red              | Blue             | Green            |
+| ------ | ---------------- | ---------------- | ---------------- |
+| **1.** | Validation error | Training error   | Test error       |
+| **2.** | Training error   | Test error       | Validation error |
+| **3.** | Optimal error    | Validation error | Test error       |
+| **4.** | Validation error | Training error   | Optimal error    |
 
 - [ ] 1
 - [ ] 2
@@ -574,59 +575,51 @@ Note: there are centres of clusters (C0, C1, C2).
 
   `// since the data is accurately classified and is neither overfitting or underfitting the dataset`
 
-#### Q75. Many of the advances in machine learning have come from improved?
-
-- [ ] structured data
-- [x] algorithms
-- [ ] time
-- [ ] computer scientists
-
-#### Q76. You need to select a machine learning process to run a distributed neural network on a mobile application. Which would you choose?
+#### Q75. You need to select a machine learning process to run a distributed neural network on a mobile application. Which would you choose?
 
 - [ ] Scikit-learn
 - [ ] PyTorch
 - [x] Tensowflow Lite
 - [ ] Tensorflow
 
-#### Q77. Which choice is the best example of labeled data?
+#### Q76. Which choice is the best example of labeled data?
 
 - [x] a spreadsheet
 - [ ] 20,000 recorded voicemail messages
 - [ ] 100,000 images of automobiles
 - [ ] hundreds of gigabytes of audio files
 
-#### Q78. In statistics, what is defined as the probability of a hypothesis test of finding an effect - if there is an effect to be found?
+#### Q77. In statistics, what is defined as the probability of a hypothesis test of finding an effect - if there is an effect to be found?
 
 - [ ] confidence
 - [ ] alpha
 - [x] power
 - [ ] significance
 
-#### Q79. You want to create a machine learning algorithm to identify food recipes on the web. To do this, you create an algorithm that looks at different conditional probabilities. So if the post includes the word _flour_, it has a slightly stronger probability of being a recipe. If it contains both _flour_ and _sugar_, it even more likely a recipe. What type of algorithm are you using?
+#### Q78. You want to create a machine learning algorithm to identify food recipes on the web. To do this, you create an algorithm that looks at different conditional probabilities. So if the post includes the word **flour**, it has a slightly stronger probability of being a recipe. If it contains both **flour** and _sugar_, it even more likely a recipe. What type of algorithm are you using?
 
 - [x] naive Bayes classifier
 - [ ] K-nearest neighbor
 - [ ] multiclass classification
 - [ ] decision tree
 
-#### Q80. What is lazy learning?
+#### Q79. What is lazy learning?
 
 - [ ] when the machine learning algorithms do most of the programming
 - [ ] when you don't do any data scrubbing
 - [x] when the learning happens continuously
 - [ ] when you run your computation in one big instance at the beginning
 
-#### Q81. What is Q-learning reinforcement learning?
+#### Q80. What is Q-learning reinforcement learning?
 
 - [ ] supervised machine learning with rewards
 - [ ] a type of unsupervised learning that relies heavily on a well-established model
 - [ ] a type of reinforcement learning where accuracy degrades over time
 - [x] a type of reinforcement learning that focuses on rewards
 
-**Explanation**:Q-learning is a model-free reinforcement learning algorithm.Q-learning is a values-based learning algorithm. Value based algorithms updates the value function based on an equation(particularly Bellman equation).
-[Reference](<https://towardsdatascience.com/a-beginners-guide-to-q-learning-c3e2a30a653c#:~:text=Q%2Dlearning%20is%20a%20model,equation(particularly%20Bellman%20equation).&text=Means%20it%20learns%20the%20value,independently%20of%20the%20agent's%20actions.>)
+[Reference](<https://towardsdatascience.com/a-beginners-guide-to-q-learning-c3e2a30a653c#:~:text=Q%2Dlearning%20is%20a%20model,equation(particularly%20Bellman%20equation).&text=Means%20it%20learns%20the%20value,independently%20of%20the%20agent's%20actions>) **Explanation**:Q-learning is a model-free reinforcement learning algorithm.Q-learning is a values-based learning algorithm. Value based algorithms updates the value function based on an equation(particularly Bellman equation).
 
-#### Q82. The data in your model has low bias and low variance. How would you expect the data points to be grouped together on the diagram?
+#### Q81. The data in your model has low bias and low variance. How would you expect the data points to be grouped together on the diagram?
 
 - [x] They would be grouped tightly together in the predicted outcome.
 - [ ] They would be grouped tightly together but far from the predicted.
@@ -635,7 +628,7 @@ Note: there are centres of clusters (C0, C1, C2).
 
 [Reference](https://medium.com/30-days-of-machine-learning/day-3-k-nearest-neighbors-and-bias-variance-tradeoff-75f84d515bdb)
 
-#### Q83. Your machine learning system is using labeled examples to try to predict future data, compare that data to the predicted result, and then the model. What is the best description of this machine learning method?
+#### Q82. Your machine learning system is using labeled examples to try to predict future data, compare that data to the predicted result, and then the model. What is the best description of this machine learning method?
 
 - [ ] unsupervised learning
 - [ ] semi-supervised learning
@@ -644,7 +637,7 @@ Note: there are centres of clusters (C0, C1, C2).
 
 [Reference](https://www.expert.ai/blog/machine-learning-definition/)
 
-#### Q84. In the 1983 movie WarGames, the computer learns how to master the game of chess by playing against itself. What machine learning method was the computer using?
+#### Q83. In the 1983 movie WarGames, the computer learns how to master the game of chess by playing against itself. What machine learning method was the computer using?
 
 - [ ] binary learning
 - [ ] supervised learning
@@ -653,7 +646,7 @@ Note: there are centres of clusters (C0, C1, C2).
 
 [Reference](https://venturebeat.com/2016/03/16/heres-what-alphagos-historic-win-means-for-the-enterprise/)
 
-#### Q85. You are working with your machine learning algorithm on something called class predictor probability. What algorithm are you most likely using?
+#### Q84. You are working with your machine learning algorithm on something called class predictor probability. What algorithm are you most likely using?
 
 - [ ] multiclass binary classification
 - [x] naive Bayes
@@ -664,65 +657,136 @@ Note: there are centres of clusters (C0, C1, C2).
 
 [Reference](https://www.linkedin.com/pulse/machine-learning-algorithms-doug-rose/)
 
-#### Q86. What is one of the most effective way to correct for underfitting your model to the data?
+#### Q85. What is one of the most effective way to correct for underfitting your model to the data?
 
 - [ ] Create training clusters
 - [ ] Remove predictors
 - [ ] Use reinforcement learning
 - [x] Add more predictors
 
-#### Q87.Your data science team is often criticized for creating reports that are boring or too obvious. What could you do to help improve the team?
+#### Q86. Your data science team is often criticized for creating reports that are boring or too obvious. What could you do to help improve the team?
 
 - [x] Suggest that the team is probably underfitting the model to the data.
 - [ ] Suggest that unsupervised learning will lead to more interesting results.
 - [ ] Make sure that they are picking the correct machine learning algorithms.
 - [ ] Encourage the team to ask more interesting questions.
 
-#### Q88. What is the difference between unstructured and structured data?
+#### Q87. What is the difference between unstructured and structured data?
 
 - [ ] Unstructured data is always text.
 - [ ] Unstructured data is much easier to store.
 - [x] Structured data has clearly defined data types.
 - [ ] Sturctured data is much more popular.
 
-#### Q89. You work for a startup that is trying to develop a software tool that will scan the internet for pictures of people using specific tools. The chief executive is very interested in using machine learning algorithms. What would you recommend as the best place to start?
+#### Q88. You work for a startup that is trying to develop a software tool that will scan the internet for pictures of people using specific tools. The chief executive is very interested in using machine learning algorithms. What would you recommend as the best place to start?
 
 - [ ] Using an unsupervised machine learning algorithm to cluster together all the photographs.
 - [ ] Crate a data lake with an unsupervised machine learning algorithm.
 - [ ] Use a combination of unsupervised and supervised machine learning to create machine-defined data clusters.
 - [x] Use supervised machine learning to classify photographs based on a predetermined training set.
 
-#### Q90. In supervised machine learning, data scientist often have the challenge of balancing between underfitting or overfitting their data model. They often have to adjust the training set to make better predictions. What is this balance called?
+#### Q89. In supervised machine learning, data scientist often have the challenge of balancing between underfitting or overfitting their data model. They often have to adjust the training set to make better predictions. What is this balance called?
 
 - [ ] the under/over challenge
 - [ ] balance between clustering classification
 - [x] bias-variance trade-off
 - [ ] the multiclass training set challenge
 
-#### Q91. What is conditional probability?
+#### Q90. What is conditional probability?
 
 - [x] the probability that doing one thing has an impact on another thing
 - [ ] the probability that certain conditions are met
 - [ ] the probability that, based on certain conditions, something will always be incorrect
 - [ ] the probability of something being the correct answer
 
-#### Q92. K-means clustering is what type of machine learning algorithm?
+#### Q91. K-means clustering is what type of machine learning algorithm?
 
 - [ ] reinforcement
 - [ ] supervised
 - [x] unsupervised
 - [ ] classification
 
-#### Q93. What is ensemble modeling?
+#### Q92. What is ensemble modeling?
 
 - [ ] when you create an ensemble of your training and test data set
 - [ ] when you create an ensemble of different servers to run the algorithms
 - [ ] when you find the one best algorithm for your ensemble
 - [x] when you use several ensembles of machine learning algorithms
 
-#### Q94. What is the best definition for bias in your data model?
+#### Q93. What is the best definition for bias in your data model?
 
 - [ ] Bias is when your predicted values are scattered.
 - [x] Bias is the gap between your predicted value and the outcome.
 - [ ] Bias is when your data is wrong for differnet reasons.
 - [ ] Bias is when your values are always off by the same percentage.
+
+#### Q94. Which project might be best suited for supervised machine learning?
+
+- [ ] data scrubbing
+- [x] predicting a risk score
+- [ ] tax filing software
+- [ ] spreadsheet consolidation
+
+#### Q95. When is a decision tree most commonly used?
+
+- [ ] with big data products
+- [x] for supervised machine learning binary classification challenges
+- [ ] to find thd best data cluster
+- [ ] to determine "Q" in Q-learning reinforcement learning
+
+#### Q96. An organisation that owns dozens of shopping malls wants to create a machine learning product that will use facial recognition to identify customers. What is the main challenge of developing such a model?
+
+- [ ] most machine learning models are not designed for video
+- [x] it might be unethical for the business to identify people without their consent
+- [ ] it will be difficult to decide between supervised and unsupervised learning
+- [ ] the image in the video would not be high quality enough to identify individuals
+
+#### Q97. Which of the following machine learning algorithms is unsupervised?
+
+- [ ] Random forest
+- [ ] k-nearest neighbors
+- [ ] Support-vector machines
+- [x] K- means
+
+Explanation:
+During training, k-means partitions observations into k clusters. During inference, it assigns a given data point to the nearest cluster by distance. k-means is unsupervised, because it doesn't require labeled data to be trained.
+
+#### Q98. Averaging the output of multiple decision trees helps to::
+
+- [ ] Increase variance
+- [ ] Increase bias
+- [x] Decrease variance
+- [ ] Decrease bias
+
+`//Averaging models leads to higher stability and a lower variance than individual models. Mathematically, remember that $Var(\bar{X})=\frac{Var(X)}{N}`
+
+#### Q99. To optimize your objective function, you are performing full batch gradient descent using the entire training set (not stochastic gradient descent). Is it required to shuffle your training set?
+
+- [ ] Yes. If you don't, the optimization will oscillate around the minimum at the end of training.
+- [ ] Yes, in order to help the model generalize to the test dataset.
+- [ ] No, it is not necessary because the dataset can already be considered shuffled from the data collection process.
+- [x] No, because each update passes through the entire dataset anyway and the order doesn't matter.
+
+`//At every iteration, full batch gradient descent uses the entire training set to compute a gradient. The order in which data is processed doesn't impact the gradient value.`
+
+At every iteration, full batch gradient descent uses the entire training set to compute a gradient. The order in which data is processed doesn't impact the gradient value.
+
+#### Q100. You've received 1,000,000 images and have split it in 96%/2%/2% between train, dev and test sets. You've trained your model, and analyzed the results. After working further on the problem, you’ve decided to correct the incorrectly labeled data on the dev set.
+
+Which of these statements do you agree with?
+
+- [x] You should also correct the incorrectly labeled data in the test set, so that the dev and test sets still come from the same distribution.
+- [ ] You should correct incorrectly labeled data in the training set as well so as to avoid your training set now being even more different from your dev set.
+- [ ] You should not correct the incorrectly labeled data in the test set, because the test set should reflect the data distribution of the real world.
+- [ ] If you want to correct incorrectly labeled data, you should do it on all three sets (train/dev/test) in order to maintain similar distributions.
+
+`//It is important that your dev and test set have the closest possible distribution to "real" data.`
+
+#### Q101. You're working on a binary classification task, to classify if an image contains a cat ("1") or doesn't contain a cat ("0"). What loss would you choose to minimize in order to train a model?
+
+- [ ] L = y log y^ + (1−y) log (1− y^)
+- [x] L = - y log y^ - (1−y) log (1− y^)
+- [ ] L = || y - y^ ||22
+- [ ] L = || y - y^ ||22 + constant
+
+`//You are trying to minimize the binary cross entropy loss over the training set..`
