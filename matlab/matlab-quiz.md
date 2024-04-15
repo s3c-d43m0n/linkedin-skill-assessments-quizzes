@@ -27,6 +27,8 @@ c = b(1, ceil(end/2));
 - [ ] errors
 - [ ] the value of variables
 
+[Reference](http://www.ece.northwestern.edu/local-apps/matlabhelp/techdoc/ref/profile.html)
+
 #### Q4. Which code block contains the correct syntax for a `while` loop?
 
 - [ ] A
@@ -413,15 +415,12 @@ a = my_func(a);
 
 #### Q25. Which statement could create this cell array?
 
-```
-c =
-    {["hello world"]}    {1×1 cell}    {["goodbye"]}    {1×3 double}
-```
+`c = {["hello world"]}    {1×1 cell}    {["goodbye"]}    {1×3 double}`
 
-- [ ] c = {"hello world" {"hello"} "goodbye" [1 2 ]};
-- [ ] c = {"hello world" {"hello"} "goodbye" {[1 2 3]}};
-- [x] c = {"hello world" {"hello"} "goodbye" [1 2 3]};
-- [ ] c = {"hello world" {"hello" "hello"} "goodbye" {[1 2 3]}};
+- [ ] c = `{"hello world" {"hello"} "goodbye" [1 2 ]};`
+- [ ] c = `{"hello world" {"hello"} "goodbye" {[1 2 3]}};`
+- [x] c = `{"hello world" {"hello"} "goodbye" [1 2 3]};`
+- [ ] c = `{"hello world" {"hello" "hello"} "goodbye" {[1 2 3]}};`
 
 #### Q26. Which choice adds `b` to each row of `a`?
 
@@ -624,7 +623,7 @@ end
 
 ![MatLab Q39](images/matlab_Q39.jpg)
 
-- [ ]
+- [ ] &shy;
 
 ```
 figure
@@ -634,7 +633,7 @@ surf(r)
 colorbar
 ```
 
-- [x]
+- [x] &shy;
 
 ```
 figure
@@ -1001,7 +1000,7 @@ a = [ 1 2 3 4];
 
 #### Q68. This graph could be the result of which block of code?
 
-![MatLab Q41](images/matlab_Q41.png)
+![MatLab Q41](images/matlab_Q41.png?raw=png)
 
 - [x] `a = randn(1,1000); histogram(a) ylabel('counts')`
 - [ ] `a = rand(1,1000); histogram(a) ylabel('counts')`
@@ -1034,3 +1033,162 @@ s="abcd"; s(3)='x'
 - [x] You want to include optional input arguments.
 - [ ] You want the workspace variable names of the input arguments.
 - [ ] You want the data types of the input arguments.
+
+#### Q72. What does e contain?
+
+```
+c = [9 8 0];
+d = [0 0 1];
+e = union(c,d);
+```
+
+- [ ] `e = [0 0 1 9 8 0]`
+- [ ] `e = [9 8 0 0 0 1]`
+- [x] `e = [0 1 8 9]`
+- [ ] `e = [1 8 9]`
+
+#### Q73. What does this function print?
+
+```
+a = 1;
+for i_loop = 1:6
+    disp(a);
+end
+```
+
+- [ ] :
+
+```
+111111
+```
+
+- [ ] :
+
+```
+1 1 1 1 1 1
+```
+
+- [ ] :
+
+```
+1
+1
+1
+1
+1
+1
+```
+
+- [x] :
+
+```
+nothing will print
+```
+
+#### Q74. You are debugging a function and have set a breaipoint on the line before the error occurs. You look at the variable values and suspect the cause of the error is that a is 9 but should be 10. The next statement after the breakpoint will use a. Wigh action would help you test if a=10 solves the problem?
+
+- [x] type "a=10;" into the function file, before the statement that's throwing an error. Then click the Run button in the debugger window.
+- [ ] Type "a=10; continue;" into the command window
+- [ ] Type "a=10;" into the command window. Then click the Run button in the debugger window
+- [ ] Type "a=10;" into the function file, before the statement that's throwing an error. Then type "return;" into the command window
+
+#### Q75. Which statement returns the character array 'alone'?
+
+```
+b = ['stand' 'alone'];
+```
+
+- [ ] b(7:11)
+- [ ] b(2)
+- [x] b(6:end)
+- [ ] b(1,2)
+
+#### Q76. Which statement returns the character array 'alone'?
+
+```
+c = {rand(20,10) rand(23,2) rand(14,5)}
+```
+
+- [ ] :
+
+```
+  b = cellfun(@(m) mean(m(:)), C
+```
+
+- [ ] :
+
+```
+b = zeros(1, size(C,1);
+    for i_C = 1:size(C,1)
+        b(1_C) = mean(C{i_C}(:));
+    end
+```
+
+- [ ] :
+
+```
+b = cellfun(@mean, C)
+```
+
+- [ ] :
+
+```
+b = zeros(1, size(C,2);
+    for i_C = 1:size(C,2)
+        b(1_C) = mean(C(i_C));
+    end
+```
+
+#### Q77. Which choice uses the proper syntax for an `if else` statement?
+
+- [ ] :
+
+```
+if (a > 1):
+    b = 2;
+else:
+    b = 3;
+```
+
+- [ ] :
+
+```
+if (a > 1){
+    b = 2;
+} else{
+    b = 3;
+}
+```
+
+- [x] :
+
+```
+if (a > 1)
+    b = 2;
+else
+    b = 3;
+end
+```
+
+- [ ] :
+
+```
+if (a > 1)
+    b = 2;
+else
+    b = 3;
+```
+
+[Reference](https://www.mathworks.com/help/matlab/ref/if.html)
+
+#### Q78. What does b contain?
+
+```
+a = [9 8 8 19 6 1 9 6 6 19];
+b = unique(a);
+```
+
+- [x] `b = [1 6 8 9 19]`
+- [ ] `b = [1 6 8 9]`
+- [ ] `b = [1 6 6 6 8 8 9 9 19 19]`
+- [ ] `b = [1 6 6 8 8 9]`

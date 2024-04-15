@@ -167,7 +167,7 @@
 - [ ] STRUCTURE table;
 - [x] DESCRIBE table;
 
-#### Q14. MySQL uses security based on \_ for all connections, queries, and other operations that users can attempt to perform.
+#### Q14. MySQL uses security based on \_ for all connections, queries, and other operations that users can attempt to perform. or How are permissions implemented in MySQL?
 
 - [ ] administrator schema
 - [ ] encrypted algorithms
@@ -347,10 +347,12 @@
 
 #### Q38. What cannot have a trigger associated with it?
 
-- [ ] temporary table
-- [x] system table
+- [x] temporary table
+- [ ] system table
 - [ ] large table
 - [ ] new table
+
+[Reference](https://dev.mysql.com/doc/refman/5.7/en/create-trigger.html)
 
 #### Q39. later versions of mysql support the native json data type for storing json documents. What is a drawback of json columns?
 
@@ -374,17 +376,6 @@
 - [x] `LOAD DATA INFILE`
 - [ ] `LOAD DATA LOCAL INFILE`
 - [ ] `extended INSERT statement`
-
-#### Q42. You are working with the tables as shown in this diagram. You need to make sure that any record added to the purchases table consists of a customerID, which already exists in the customers table, and a carID, which already exists in the cars table. You decide to use a trigger to do the validation. Which one do you use?
-
-![mysql Q43](images/mysql_q43.jpg?raw=true)
-
-- [ ] `AFTER INSERT`
-- [x] `BEFORE INSERT`
-- [ ] `CROSS JOIN`
-- [ ] `IF EXISTS`
-
-`IF EXISTS` and `CROSS JOIN` are not valid for a trigger.
 
 #### Q43. Which is the correct syntax of an extended insert statement?
 
@@ -416,7 +407,7 @@ Note that the question is about _getting_ the data and not about the _duplicatin
 - [x] Run MySQL server as the unix root user.
 - [ ] Use the compressed protocol.
 
-#### Q46. You manage a database with a table "customers". You created a temporary table also called "customers" with which you are working for the duration of your session. You need to recreate the temporary table with different specs. Which command do you need to run first?
+#### Q46. You are managing a database with a table called customers. You created a temporary table also called customers with which you are working for the duration of your session. You need to re-create the temporary table with different specifications. Which command do you need to run first?
 
 - [ ] `CREATE TEMPORARY TABLE customers;`
 - [ ] `DROP TEMP TABLE customers;`
@@ -502,7 +493,7 @@ Note: `DESCRIBE tablename` is a shortcut for this command
 
 - [x] to reduce corruption in data
 - [ ] to reduce storage space
-- [ ] to make the system faster
+- [x] to make the system faster
 - [ ] to prevent data anomalies
 
 Note: "to make the system faster" can also be correct. For example we can calculate some heavy query in advance and store its result in some column (use it as a cache). So if "system" means "application which uses mysql" then it's correct too.
@@ -690,56 +681,49 @@ WHERE MATCH(address) AGAINST ('street, drive');
 - [x] The temporary table will be dropped as soon as your session disconnects.
 - [ ] Creating a temporary table does not require any special privileges.
 
-#### Q72. Which is a valid constructor for a class named User?
-
-- [ ] `public construct User() {}`
-- [x] `public User() {}`
-- [ ] `public instance User() {}`
-- [ ] `public init User() {}`
-
-#### Q73. What is the maximum number of columns that can be used by a single table index?
+#### Q72. What is the maximum number of columns that can be used by a single table index?
 
 - [ ] 2
 - [ ] 4
 - [ ] 8
 - [x] 16
 
-#### Q74. Which command will return a list of triggers in the current database?
+#### Q73. Which command will return a list of triggers in the current database?
 
 - [ ] `DISPLAY TRIGGERS;`
 - [x] `SHOW TRIGGERS;`
 - [ ] `SELECT ALL TRIGGERS;`
 - [ ] `SELECT * FROM information_schema.triggers;`
 
-#### Q75. Which statement is true about TIMESTAMP and DATETIME data types?
+#### Q74. Which statement is true about TIMESTAMP and DATETIME data types?
 
 - [ ] TIMESTAMP values require more bytes for storage than DATETIME values.
 - [ ] TIMESTAMP is stored without timezone, and DATETIME is stored in UTC values.
 - [x] TIMESTAMP and DATETIME are both stored without time zone.
 - [ ] TIMESTAMP is stored in UTC values, and DATETIME is stored in without time zone.
 
-#### Q76. What is the equivalent of the mysqladmin reload command?
+#### Q75. What is the equivalent of the mysqladmin reload command?
 
 - [ ] `mysqladmin flush-threads`
 - [ ] `mysqladmin flush-tables`
 - [x] `mysqladmin flush-privileges`
 - [ ] `mysqladmin flush-all`
 
-#### Q77. Explain the security aspect of stored procedures
+#### Q76. Explain the security aspect of stored procedures
 
 - [ ] Stored procedures are not secure, because they can be executed from the command line as the root user
 - [ ] Stored procedures are secure, because the owner of the stored procedure can decide to whom access is granted
-- [x] Stored procedures are secure, because applications can be given access to stored procedures and not any underlying variables
+- [x] Stored procedures are secure, because applications can be given access to stored procedures and not any underlying tables
 - [ ] Stored procedures are not secure, because they can execute statements to drop tables or bulk delete data
 
-#### Q78. How would you retrieve data on all the customers where no phone number is stored?
+#### Q77. How would you retrieve data on all the customers where no phone number is stored?
 
 - [ ] `SELECT * FROM customers WHERE PhoneNumber = NULL;`
 - [ ] `SELECT * FROM customers WHERE PhoneNumber IS NOT VALID;`
 - [x] `SELECT * FROM customers WHERE PhoneNumber IS NULL;`
 - [ ] `SELECT * FROM customers WHERE PhoneNumber IS UNKNOWN;`
 
-#### Q79. In the diagram below, the price field is declared as type DECIMAL. What would be a more efficient declaration for this field?
+#### Q78. In the diagram below, the price field is declared as type DECIMAL. What would be a more efficient declaration for this field?
 
 ![mysql picture](images/mysql_q80.png?raw=true)
 
@@ -748,7 +732,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 - [ ] NUMERIC
 - [ ] DOUBLE
 
-#### Q80. Which choice is `not` an available string type for a column?
+#### Q79. Which choice is `not` an available string type for a column?
 
 - [ ] `ENUM`
 - [ ] `SET`
@@ -757,7 +741,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 
 Explnation: BIT is not a string type
 
-#### Q81. This diagram shows what type of relationship between customers and cars?
+#### Q80. This diagram shows what type of relationship between customers and cars?
 
 ![mysql picture](images/mysql_q80.png?raw=true)
 
@@ -766,7 +750,7 @@ Explnation: BIT is not a string type
 - [x] many-to-many
 - [ ] many-to-one
 
-#### Q82. A stored routine is a set of SQL statements stored on the server and takes form as either a procedure or a function. Which statement cannot be used inside stored routines?
+#### Q81. A stored routine is a set of SQL statements stored on the server and takes form as either a procedure or a function. Which statement cannot be used inside stored routines?
 
 - [ ] `SELECT`
 - [x] `USE`
@@ -775,14 +759,14 @@ Explnation: BIT is not a string type
 
 Explanation: Both `SET` and `DECLARE` are used to create variables. Reference: [MySQL STORED PROCEDURE Tutorial With Examples](https://www.softwaretestinghelp.com/mysql-stored-procedure/)
 
-#### Q83. When a new student is added to a new database, you want new records to be created in the related tables such as Exam, Score and Attendance. How would you accomplish this?
+#### Q82. When a new student is added to a new database, you want new records to be created in the related tables such as Exam, Score and Attendance. How would you accomplish this?
 
 - [x] trigger
 - [ ] regular expression
 - [ ] view
 - [ ] index
 
-#### Q84. In the diagram below, the ID fields are declared as type CHAR instead of INT . Which is NOT one of the possible reasons behind that decision?
+#### Q83. In the diagram below, the ID fields are declared as type CHAR instead of INT . Which is NOT one of the possible reasons behind that decision?
 
 ![mysql picture](images/mysql_q85.png?raw=true)
 
@@ -791,7 +775,7 @@ Explanation: Both `SET` and `DECLARE` are used to create variables. Reference: [
 - [ ] The ID field needs to have leading 0s, which the INT data type would truncate.
 - [x] The `CHAR(10)` data type is more efficient and space-saving.
 
-#### Q85. Why would you use a common table expression (CTE)?
+#### Q84. Why would you use a common table expression (CTE)?
 
 - [ ] To define queries for later reuse for the duration of the current session
 - [ ] To create temporary tables that can be used to pre-select often-used result sets.
@@ -800,7 +784,7 @@ Explanation: Both `SET` and `DECLARE` are used to create variables. Reference: [
 
 Explanation: CTEs do not create temporary tables, they only work within a signle query. Reference: [13.2.15 WITH (Common Table Expressions)](https://dev.mysql.com/doc/refman/8.0/en/with.html).
 
-#### Q86. Which option modifier tells a program not to exit with an error if it does not recognize the option, but instead to issue a warning?
+#### Q85. Which option modifier tells a program not to exit with an error if it does not recognize the option, but instead to issue a warning?
 
 - [ ] --verbose
 - [ ] --skip
@@ -809,7 +793,7 @@ Explanation: CTEs do not create temporary tables, they only work within a signle
 
 Reference: [4.2.2.4 Program Option Modifiers](https://dev.mysql.com/doc/refman/8.0/en/option-modifiers.html)
 
-#### Q87. What does this SQL statement return?
+#### Q86. What does this SQL statement return?
 
 ```
 SELECT name FROM students WHERE name REGEXP '^to';
@@ -820,7 +804,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 - [ ] all names without "to," such as Samantha or Kathryn
 - [ ] all names ending with "to," such as Roberto
 
-#### Q88. You are working with the tables as shown in the diagram. You need to generate the list of price totals for each make and model of car, with subtotals for each make, and the grand total of all prices. Which SQL clause do you use?
+#### Q87. You are working with the tables as shown in the diagram. You need to generate the list of price totals for each make and model of car, with subtotals for each make, and the grand total of all prices. Which SQL clause do you use?
 
 ![mysql picture](images/mysql_q92.png?raw=true)
 
@@ -829,56 +813,49 @@ SELECT name FROM students WHERE name REGEXP '^to';
 - [ ] UNION ALL
 - [x] WITH ROLLUP
 
-#### Q89. The left and right joins are also known as \_.
+#### Q88. The left and right joins are also known as \_.
 
 - [ ] Inner Join
 - [ ] Natural Join
 - [x] Outer Join
 - [ ] Cartesian Join
 
-#### Q90. What is the valid way to create a database view in MySQL?
+#### Q89. What is the valid way to create a database view in MySQL?
 
 - [ ] `CREATE VIEW v1 SELECT * FROM t1 WHERE col1 > 10;`
 - [ ] `CREATE VIEW v1 AS BEGIN SELECT * FROM t1 END;`
 - [ ] `CREATE VIEW v1 BEGIN SELECT * FROM t1 END;`
 - [x] `CREATE VIEW v1 AS SELECT * FROM t1;`
 
-#### Q91. How are permissions implemented in MySQL?
-
-- [ ] encrypted algorithms
-- [x] access control lists
-- [ ] user settings
-- [ ] administrator schema
-
-#### Q92. Inside a transaction, several operations need to be performed. What would you do if an exception happens during that transaction?
+#### Q90. Inside a transaction, several operations need to be performed. What would you do if an exception happens during that transaction?
 
 - [ ] `UNDO`
 - [ ] `UNCOMMIT`
 - [x] `ROLLBACK`
 - [ ] `REVERSE`
 
-#### Q93. What function finds the current time or date in MySQL?
+#### Q91. What function finds the current time or date in MySQL?
 
 - [ ] DATE()
 - [ ] GETDATE()
 - [x] CURDATE()
 - [ ] CURRENT()
 
-#### Q94. What is the correct usage of ENUM in MySQL?
+#### Q92. What is the correct usage of ENUM in MySQL?
 
 - [ ] `Create table size (ENUM ('Small','Medium','Large'));`
 - [ ] `Create table ENUM (name ('Small','Medium','Large'));`
 - [ ] `Create table size (name: ENUM['Small','Medium','Large']);`
 - [x] `Create table size (name ENUM('Small','Medium','Large'));`
 
-#### Q95. The mysqldump command cannot generate output in **\_**.
+#### Q93. The mysqldump command cannot generate output in **\_**.
 
 - [x] JSON
 - [ ] CSV
 - [ ] XML
 - [ ] TXT
 
-#### Q96. You are working with the tables as shown in this diagram. You need to generate the list of all cars, whether or not they had been sold, with the purchase date of the cars that were sold. Which statement accomplishes that?
+#### Q94. You are working with the tables shown below. You need to generate the list of all cars, whether or not they had been sold. Which statement accomplishes that?
 
 ![mysql picture](images/mysql_q98.png?raw=true)
 
@@ -912,7 +889,7 @@ ON cars.ID = purchases.carID;
 SELECT cars.*, purchases.date FROM cars LEFT JOIN purchases ON cars.ID = purchases.carID;
 ```
 
-#### Q97. Which code snippet from a stored procedure should be rewritten as a CASE statement?
+#### Q95. Which code snippet from a stored procedure should be rewritten as a CASE statement?
 
 - [ ] A
 
@@ -954,14 +931,14 @@ SELECT cars.*, purchases.date FROM cars LEFT JOIN purchases ON cars.ID = purchas
     END IF;
 ```
 
-#### Q98. Why would you use stored functions?
+#### Q96. Why would you use stored functions?
 
-- [ ] for formulas and business rules that you want to apply to columns in an SQL query
-- [x] for formulas and business rules that should be applied on a specific trigger event like on inserts
+- [x] for formulas and business rules that you want to apply to columns in an SQL query
+- [ ] for formulas and business rules that should be applied on a specific trigger event like on inserts
 - [ ] to automatically modify the data of a table based on a query
-- [ ] for reusing recurring queries
+- [x] for reusing recurring queries
 
-#### Q99. What steps do you need to take to normalize the table from this diagram?
+#### Q97. What steps do you need to take to normalize the table from this diagram?
 
 Table name: superheroes
 | name | alias | power1 | power2 | power3 |
@@ -977,21 +954,14 @@ Table name: superheroes
 - [ ] Extend this table to have additional columns "power4," "power5," and so on, to allow additional powers for each superhero.
 - [ ] Convert this table to have column called "power," and add one record for each superhero-power combination, for a total of 15 records in this example.
 
-#### Q100. What is valid way to create a database view in MySQL?
-
-- [ ] 1 CREATE VIEW v1 2 SELECT \* FROM t1 3 WHERE col1 &gt; 10;
-- [ ] 1 CREATE VIEW v1 2 BEGIN 3 SELECT \* FROM t1 4 END
-- [ ] 1 CREATE VIEW v1 AS 2 SELECT \* FROM t1;
-- [ ] 1 CREATE VIEW v1 AS 2 BEGIN 3 SELECT \* FROM t1 4 END;
-
-#### Q101. A table Item has a Boolean field endOfLife and a field makeYear of type YEAR(4). How can you set the Boolean to true for all Items that have been made before 2019?
+#### Q98. A table Item has a Boolean field endOfLife and a field makeYear of type YEAR(4). How can you set the Boolean to true for all Items that have been made before 2019?
 
 - [ ] UPSERT Item SET endOfLife = true WHERE makeYear < 2019
 - [ ] CHANGE Item SET endOfLife = true WHERE makeYear < 2019
 - [ ] ALTER Item SET endOfLife = true WHERE makeYear < 2019
 - [x] UPDATE Item SET endOfLife = true WHERE makeYear < 2019
 
-#### Q102. Which choice is an example of an aggregate function?Which choice is an example of an aggregate function?
+#### Q99. Which choice is an example of an aggregate function?
 
 - [ ] NOW()
 - [ ] MID()
@@ -1000,9 +970,9 @@ Table name: superheroes
 
 [Reference](https://www.sqltutorial.org/sql-aggregate-functions/)
 
-#### Q103. You are working on UPDATE trigger on the employee tablein this diagram. How can you access the new value for the address inside the trigger?
+#### Q100. You are working on UPDATE trigger on the employee tablein this diagram. How can you access the new value for the address inside the trigger?
 
-![mysql picture](images/mysql_q103.png?raw=true)
+![mysql picture](images/mysql_q116.png?raw=true)
 
 - [x] Use NEW.address
 - [ ] Use INSERTED.address
@@ -1011,23 +981,221 @@ Table name: superheroes
 
 [Reference](https://dev.mysql.com/doc/refman/8.0/en/trigger-syntax.html)
 
-#### Q104. You are working with the tables as shown in this diagram. You need to generate the list of customers who purchased certain car models. Which SQL clause do you use?
+#### Q101. You are working with the tables as shown in this diagram. You need to generate the list of customers who purchased certain car models. Which SQL clause do you use?
+
+![Q104](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/assets/22109189/5c73a5c5-3e8b-4110-8068-dca25b323e57)
 
 - [ ] UNION ALL
 - [x] UNION
 - [ ] SHOW TOTALS
 - [ ] WITH ROLLUP
 
-#### Q105. You are managing a database with a table called "customers". You created a temporary table also called "customers" with which you are working for the duration of your session. You need to re-create the temporary table with different specifications. Which command do you need to run first?
-
-- [ ] `CREATE TEMPORARY TABLE customers;`
-- [ ] `DROP TEMP TABLE customers;`
-- [ ] `DROP TEMPORARY TABLE customers;`
-- [x] `DROP TABLE customers;`
-
-#### Q106. How would you make a case-insensitive query in MySQL?
+#### Q102. How would you make a case-insensitive query in MySQL?
 
 - [ ] `SELECT * FROM customers WHERE UPPEERCASE(LastName) = 'POTTER';`
 - [ ] `SELECT * FROM customers WHERE LOWERCASE(LastName) = 'potter';`
 - [x] `SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`
 - [ ] `SELECT * FROM customers WHERE UPPER(LastName) = 'Potter';`
+
+#### Q103. "COUNT" keyword belongs to which categories in Mysql?
+
+- [x] Aggregate functions
+- [ ] Operators
+- [ ] Clauses
+- [ ] All of the mentioned`
+
+#### Q104. What is the meaning of "HAVING" clause in Mysql?
+
+- [ ] To filter out the column values
+- [x] To filter out the row values
+- [ ] To filter out the row and column values
+- [ ] None of the mentioned
+
+#### Q105. Which clause is similar to "HAVING" clause in Mysql?
+
+- [ ] SELECT
+- [ ] FROM
+- [x] WHERE
+- [ ] None of the mentioned
+
+#### Q106. What will be the output of the following MySQL command?
+
+      SELECT emp_id, fname, lname
+      FROM employee
+      WHERE title=’HEAD TELLER’ AND start_date&gt;2008-11-23;
+
+- [ ] All columns
+- [ ] Only those columns which are mention with "SELECT" clause
+- [x] Columns mention with "SELECT" clause and only those rows which contain 'HEAD TELLER' as a "title"
+- [ ] None of the mentioned
+
+#### Q107. Is there any error in the following MySQL statement?
+
+      SELECT e.emp_id, e.fname,e.lname,d.name
+      FROM employee e INNER JOIN department d
+      ON e.dept_id=e.dept_id;
+
+- [x] NO
+- [ ] YES
+- [ ] DEPEND
+- [ ] None of the mentioned
+
+#### Q108. With MySQL, how do you select all the records from a table named "Persons" where the "LastName" is alphabetically between (and including) "Hansen" and "Pettersen"?
+
+- [ ] `SELECT LastName>'Hansen' AND LastName<'Pettersen' FROM Persons`
+- [x] `SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`
+- [ ] `SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName<'Pettersen'`
+- [ ] `None of the above.`
+
+[Reference](https://www.w3schools.com/mysql/mysql_between.asp)
+
+#### Q109. Consider the set of relations given below and the SQL query that follows
+
+        Students : (Roll number, Name, Date of birth)
+        Courses: (Course number, Course name, instructor)
+        Grades: (Roll number, Course number, Grade)
+        SELECT DISTINCT Name
+        FROM Students, Courses, Grades
+        WHERE Students.Roll_number = Grades.Roll_number
+        AND Courses.Instructor =Sriram
+        AND Courses.Course_number = Grades.Course_number
+        AND Grades.Grade = A
+
+(Which of the following sets is computed by the above query?)
+
+- [ ] Names of Students who have got an A grade in all courses taught by Sriram
+- [ ] Names of Students who have got an A grade in all courses
+- [x] Names of Students who have got an A grade in at least one of the courses taught by Sriram
+- [ ] None of the above
+
+#### Q110. You are working with the tables shown below. You need to make sure that any record added to the purchases table consists of a customerlD, which already exists in the customers table, and a carlD, which already exists in the cars table. You decide to use a trigger to do the validation. Which one do you use?
+
+![mysql picture](images/mysql_q85.png?raw=true)
+
+- [ ] IF EXISTS
+- [ ] CROSS JOIN
+- [x] BEFORE INSERT
+- [ ] AFTER INSERT]
+
+`IF EXISTS` and `CROSS JOIN` are not valid for a trigger.
+
+#### Q111. Current versions of MySQL support the full-text search feature on some storage engines, as an alternative to using the LIKE operator and regular expressions. Which statement would you run to enable a full-text index for the column description in the table Car?
+
+- [x] ALTER TABLE car ADD FULL TEXT(description);
+- [ ] MERGE TABLE car ADD FULL TEXT(description)
+- [ ] ENABLE FULL TEXT(description) car
+- [ ] SEARCH FULL TEXT(description) car
+
+#### Q112. Which statement would you _not_ use to filter data?
+
+![image](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/assets/22109189/9cb0ae9d-1f6b-4f85-9d2f-44b6a7afd00c)
+
+- [x] GROUP_BY
+- [ ] MATCH
+- [ ] WHERE
+- [ ] LIKE
+
+#### Q113. In MySQL, which JOIN type returns all rows from the left table and the matching rows from the right table, and fills in with NULL values if there is no match on the right side?
+
+- [ ] INNER JOIN
+- [x] LEFT JOIN (or LEFT OUTER JOIN)
+- [ ] RIGHT JOIN (or RIGHT OUTER JOIN)
+- [ ] FULL JOIN (or FULL OUTER JOIN)
+
+#### Q114. What does SQL stand for in MySQL?
+
+- [x] Structured Query Language
+- [ ] Simple Query Language
+- [ ] System Query Language
+- [ ] Structured Question Language
+
+#### Q115. Which MySQL statement is used to select data from a database?
+
+- [ ] Extract
+- [x] select
+- [ ] get
+- [ ] Open
+
+#### Q116. What is the purpose of the `PRIMARY KEY` in a MySQL table?
+
+- [x] To create a unique index on a table
+- [ ] To define a column as an integer
+- [ ] To define the data type of a column
+- [ ] To specify a foreign key reference
+
+[Reference](<https://www.w3schools.com/mysql/mysql_primarykey.asp#:~:text=The%20PRIMARY%20KEY%20constraint%20uniquely,or%20multiple%20columns%20(fields).>)
+
+#### Q117. Which of the following is a valid SQL query to insert a new row into the users table?
+
+- [x] `INSERT INTO users (name, email) VALUES ('John Doe', 'john.doe@example.com')`
+- [ ] `ADD users (name, email) VALUES ('John Doe', 'john.doe@example.com')`
+- [ ] `CREATE users (name, email) VALUES ('John Doe', 'john.doe@example.com')`
+- [ ] `UPDATE users (name, email) VALUES ('John Doe', 'john.doe@example.com')`
+
+#### Q118. Which of the following is a valid SQL query to delete the row with the id of 2 from the users table?
+
+- [x] `DELETE FROM users WHERE id = 2`
+- [ ] `REMOVE FROM users WHERE id = 2`
+- [ ] `DROP users WHERE id = 2`
+- [ ] `TRUNCATE users WHERE id = 2`
+
+#### Q119. MySQL programs are a set of command-line utilities that are provided with typical MySQL distributions. MySQL is designed to be a database.
+
+- [ ] database and programming
+- [ ] user and administrator
+- [x] client and server
+- [ ] syntax and objects
+
+#### Q120. Which MySQL command shows the structure of a table?
+
+- [ ] INFO table;
+- [ ] SHOW table;
+- [ ] STRUCTURE table;
+- [x] DESCRIBE table;
+
+#### Q121. The left and right joins are also known as \_.
+
+- [ ] Inner Join
+- [ ] Natural Join
+- [x] Outer Join
+- [ ] Cartesian Join
+
+#### Q122. What is the valid way to create a database view in MySQL?
+
+- [ ] `CREATE VIEW v1 SELECT * FROM t1 WHERE col1 > 10;`
+- [ ] `CREATE VIEW v1 AS BEGIN SELECT * FROM t1 END;`
+- [ ] `CREATE VIEW v1 BEGIN SELECT * FROM t1 END;`
+- [x] `CREATE VIEW v1 AS SELECT * FROM t1;`
+
+#### Q123. In a database with a "Students" table containing information about students, which SQL statement is used to retrieve the names of all students who scored higher than 90 in their exams?
+
+- [ ] A
+
+```
+SELECT student_name FROM Students WHERE score > 90;
+```
+
+- [x] B
+
+```
+SELECT name FROM Students WHERE score > 90;
+```
+
+- [ ] C
+
+```
+SELECT student_name FROM Students WHERE exam_score > 90;
+```
+
+- [ ] D
+
+```
+SELECT name FROM Students WHERE exam_score > 90;
+```
+
+#### Q124 Which SQL command is used to retrieve data from a database?
+
+- [ ] FETCH
+- [ ] SEARCH
+- [x] SELECT
+- [ ] EXTRACT
